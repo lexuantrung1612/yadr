@@ -40,6 +40,11 @@ task :install => :submodules do
     end
     `ln -s "#{source}" "#{target}"`
   end
+
+  if want_to_install_fonts?
+    `cp fonts/* $HOME/Library/Fonts`
+  end
+
   success_msg("installed")
 end
 
@@ -55,6 +60,11 @@ private
 
 def want_to_install? (section)
   puts "Would you like to install configuration files for: #{section}? [y]es, [n]o"
+  STDIN.gets.chomp == 'y'
+end
+
+def want_to_install_fonts?
+  puts "Would you like to install fonts? [y]es, [n]o"
   STDIN.gets.chomp == 'y'
 end
 
