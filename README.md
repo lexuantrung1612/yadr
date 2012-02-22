@@ -8,7 +8,7 @@
     # Yet Another Dotfile Repo v0.8
     # Alpha Release Please Report Bugs
 
-    git clone https://github.com/skwp/dotfiles ~/.yadr
+    git clone https://github.com/kirilk/dotfiles ~/.yadr
     cd ~/.yadr && rake install
 
     # Your dotfiles are safe! YADR will not
@@ -49,7 +49,7 @@ Janus is an amazing _first effort_ to deliver a ready-to-use vim setup and is a 
 
 
 ## Screenshot
-![screenshot](http://i.imgur.com/lEFlF.png)
+![screenshot](http://i.imgur.com/m9NNB.png)
 
 
 ## Before you start
@@ -121,7 +121,7 @@ Installation is automated via `rake` and the `yadr` command. To get
 started please run:
 
 ```bash
-git clone https://github.com/skwp/dotfiles ~/.yadr
+git clone https://github.com/kirilk/dotfiles ~/.yadr
 cd ~/.yadr && rake install
 ```
 
