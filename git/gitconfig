@@ -1,5 +1,11 @@
 # set your user tokens as enivornment variables, such as ~/.secrets
 # See the README for examples.
+[i18n]
+  commitencoding = UTF-8
+
+[i18n]
+  logoutputencoding = UTF-8
+
 [color]
   ui = true
 [color "branch"]
@@ -100,6 +106,7 @@
   autocrlf = false
   editor = vim
   excludesfile = ~/.dotfiles/gitignore_global
+  excludesfile = /Users/pietia/.gitignore
 [advice]
   statusHints = false
 [diff]
