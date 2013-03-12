@@ -121,6 +121,4 @@
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
-[user]
-	name = pietia
-	email = pietia@appgrinder.pl
+
