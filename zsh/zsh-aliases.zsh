@@ -21,3 +21,4 @@ alias t="bundle exec rake"
 # usage: fn foo 
 # to find all files containing 'foo' in the name
 function fn() { ls **/*$1* }
+

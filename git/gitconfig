@@ -45,8 +45,7 @@
   last = diff HEAD^                 # diff last committed change
 
   # log
-  log = log --decorate --graph --date=short
-  l = log
+  l = log --graph --date=short
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
   short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
   changelog = log --pretty=format:\" * %s\"
@@ -91,9 +90,15 @@
   svnl = svn log --oneline --show-commit
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+[mergetool]
+  prompt = false
+[mergetool "mvimdiff"]
+  cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
+  keepbackup=false
 [merge]
   summary = true
   verbosity = 1
+  tool = mvimdiff
 [apply]
   whitespace = nowarn
 [branch]
@@ -105,8 +110,7 @@
 [core]
   autocrlf = false
   editor = vim
-  excludesfile = ~/.dotfiles/gitignore_global
-  excludesfile = /Users/pietia/.gitignore
+  excludesfile = ~/.yadr/git/gitignore
 [advice]
   statusHints = false
 [diff]
