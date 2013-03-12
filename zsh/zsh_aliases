@@ -9,7 +9,7 @@ alias -g N="| /dev/null"
 alias -g S='| sort'
 alias -g G='| grep' # now you can do: ls foo G something
 
-alias killr="ps | grep 'ruby ' | awk '{print \$2}' | xargs kill -9"
+alias killr="kill -9 `pgrep ruby`"
 alias s="bundle exec rails s"
 alias c="bundle exec rails c"
 alias m="bundle exec rake db:migrate ; bundle exec rake db:migrate RAILS_ENV=test"
